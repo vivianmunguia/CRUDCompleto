@@ -15,6 +15,7 @@
             <input type="text" name="email" placeholder="Email">
             <input type="text" name="password" placeholder="Password">
             <input type="text" name="confiPassword" placeholder="Confirm password">
+            <input type="submit" value="Sign UP" name="signUP_button">
         </form>
     </div>
 </body>
