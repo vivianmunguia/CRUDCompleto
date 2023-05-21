@@ -9,6 +9,9 @@
 </head>
 <body>
     <div class="form">
+        <div class="title">
+            <p>Sign UP form</p>
+        </div>
         <form action="" method="post">
             <input type="text" name="name" placeholder="Name">
             <input type="text" name="lastName" placeholder="Last name">
