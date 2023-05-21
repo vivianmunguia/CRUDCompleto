@@ -11,11 +11,11 @@
     <?php
         require('./conection.php');
         if (isset($_POST['signUP_button'])) {
-            $name=$_POST['name'];
-            $lastName=$_POST['lastName'];
-            $email=$_POST['email'];
-            $password=$_POST['password'];
-            $confPassword=$_POST['confiPassword'];
+            $name = $_POST['name'];
+            $lastName = $_POST['lastName'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $confPassword = $_POST['confiPassword'];
             if (!empty($_POST['name']) && !empty($_POST['lastName']) && !empty($_POST['email']) && !empty($_POST['password'])) {
                 if ($password == $confPassword) {
                     $p = crud::conect()->prepare('INSERT INTO crudtable(name, lastName, email, pass) VALUES(:n, :l, :e, :p)');
