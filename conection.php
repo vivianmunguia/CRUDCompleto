@@ -10,5 +10,14 @@
                 echo 'Generic error!'.$error2->getMesssage();
             }           
         }
+
+        public static function Selectdata()
+        {
+            $data = array();
+            $p = crud::conect()->prepare('SELECT * FROM crudtable');
+            $p->execute();
+            $data = $p->fetchAll(PDO::FETCH_ASSOC);
+            return $data;
+        }
     }
 ?>
