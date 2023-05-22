@@ -15,6 +15,8 @@
                 <th>Last Name</th>
                 <th>Email</th>
                 <th>Password</th>
+                <th>Delete</th>
+                <th>Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -29,6 +31,10 @@
                                 echo '<td>'.$value.'</td>';
                             }
                         }
+            ?>
+            <td><a href="users.php">Delete</a></td>
+            <td><a href="upDate.php">Edit</a></td>
+            <?php
                         echo '</tr>';
                     }
                 }
