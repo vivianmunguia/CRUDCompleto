@@ -23,6 +23,10 @@
             <?php
                 require('./conection.php');
                 $p = crud::Selectdata();
+                if (isset($_GET['id'])) {
+                    $id = $_GET['id'];
+                    $e=crud::delete($id);
+                }
                 if (count($p) > 0) {
                     for ($i=0; $i < count($p); $i++) { 
                         echo '<tr>';
@@ -32,8 +36,8 @@
                             }
                         }
             ?>
-            <td><a href="users.php">Delete</a></td>
-            <td><a href="upDate.php">Edit</a></td>
+            <td><a href="users.php?id=<?php echo $p[$i]['id'] ?>"><img src="./eliminar.png" alt="" srcset=""></a></td>
+            <td><a href="upDate.php"><img src="./editar.png" alt="" srcset=""></a></td>
             <?php
                         echo '</tr>';
                     }

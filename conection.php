@@ -19,5 +19,12 @@
             $data = $p->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }
+
+        public static function delete($id)
+        {
+            $p = crud::conect()->prepare('DELETE FROM crudtable WHERE id=:id');
+            $p->bindValue(':id',$id);
+            $p->execute();
+        }
     }
 ?>
